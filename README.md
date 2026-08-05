@@ -32,3 +32,28 @@ owns the categories, the model does the reasoning.
 Python · Streamlit · Google Gemini API · deployed on Streamlit Community Cloud
 
 ## Run it yourself
+
+```
+pip install -r requirements.txt
+streamlit run app.py
+```
+ 
+Add your Gemini key to `.streamlit/secrets.toml`:
+ 
+```
+GEMINI_API_KEY = "your-key"
+```
+ 
+## Accuracy
+ 
+Explanations are generated from the model's knowledge of general, publicly-documented
+transaction practice. No proprietary methodology or client material is used anywhere in
+this project. Output may contain errors and is not a substitute for firm guidance or
+professional advice.
+ 
+## What I'd do next
+ 
+- Ground the definitions in a curated glossary rather than model knowledge alone
+- Build an eval set of 25 terms with expert-checked answers, and score against it
+- Add a comparison mode for term pairs like RTB vs CTB
+```
